@@ -1,5 +1,11 @@
 # lesser
 
+
+## THIS IS BROKEN
+
+Somewhere between type parameters entering `gotip` and `go1.18-rc1`, several things that were previously possible were made impossible. Most crucially, this includes that line 43 now causes the compiler to throw the error `cannot use a type parameter as RHS in type declaration`. I'm not sure what purpose prohibiting this behavior served, but it's probably for the best because I seriously don't think this is the best way to solve this problem. I much prefer Ian Lance Taylor's suggestion [here](https://github.com/golang/go/issues/47632#issuecomment-897168431), and I hope this is what the community eventually falls behind.
+
+
 ## What is this?
 
 `lesser` defines a type-parameterized interface with one method, `Less`, which returns a boolean for whether the caller, of type `T`, is less than some other instance of `T`. This is blatantly stolen from [Robert Griesemer's talk at Gophercon 2020](https://www.youtube.com/watch?v=TborQFPY2IM) about the type parameters proposal. Probably more controversially, this library also defines a wrapper called `Basic` over the built-in numerical types, exposing the underlying `<` operator through this `Less` method. The reasoning for this follows.
