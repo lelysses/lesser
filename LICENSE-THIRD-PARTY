@@ -1,13 +1,11 @@
 Third party code used by lesser along with associated licenses
 ===============================================================
 
-"Ordered" interface copied from the Type Parameters Proposal at
-https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md
+The constraints library, found at golang.org/x/exp/constraints,
+borrowed under the BSD 3-clause license as reproduced below:
 
-Under the LICENSE at https://go.googlesource.com/proposal/+/refs/heads/master/LICENSE
-reproduced here:
+Copyright (c) 2009 The Go Authors. All rights reserved.
 
-Copyright (c) 2014 The Go Authors. All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
 met:
